@@ -1,65 +1,105 @@
 .Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
   background-color: #f8f9fa;
 }
 
 .Nav ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
+  gap: 20px;
+  font-size: 18px;
 }
 
 .Main {
-  display: flex;
-  background-color: rgba(127, 255, 212, 0.23);
+  display: grid;
+  gap: 200px;
   min-height: 500px;
-  padding: 20px;
 }
 
-/* Typography */
+.Hero {
+  background-color: var(--color-dark-green);
+}
 
+.Footer {
+  display: flex;
+  background-color: aliceblue;
+  min-height: 300px;
+}
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap");
+
+/* Define CSS Variables */
+:root {
+  /* Brand Colors */
+  --color-dark-green: #495e57;
+  --color-yellow: #f4ce14;
+  --color-light-green: #a4b97f;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Typography */
+  --font-heading: "Markazi Text", serif;
+  --font-body: "Karla", sans-serif;
+
+  /* Spacing & Sizing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --border-radius: 8px;
+}
+
+/* Base Styles */
 body {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-dark-green);
   background-color: var(--color-white);
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+/* Headings */
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
+  font-weight: 500;
   color: var(--color-dark-green);
   margin-bottom: var(--spacing-md);
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.75rem;
 }
 
+/* Paragraphs */
 p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: var(--spacing-md);
 }
 
-/* Components */
+/* Anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font-body);
+}
 
+a:hover {
+  color: var(--color-yellow) !important;
+}
+
+/* Buttons */
 .button-primary {
   background-color: var(--color-yellow);
   color: var(--color-black);
@@ -69,9 +109,37 @@ p {
   border-radius: var(--border-radius);
   cursor: pointer;
   font-weight: 600;
-  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .button-primary:hover {
-  background-color: var(--color-light-green);
+  opacity: .75;
 }
+
+.logo {
+  width: 300px;
+}
+
+/* Colors */
+
+/* Background Colors */
+.ll-bg-dark-green    { background-color: var(--color-dark-green); }
+.ll-bg-yellow        { background-color: var(--color-yellow); }
+.ll-bg-light-green   { background-color: var(--color-light-green); }
+.ll-bg-white         { background-color: var(--color-white); }
+.ll-bg-black         { background-color: var(--color-black); }
+
+/* Text Colors */
+.ll-text-dark-green    { color: var(--color-dark-green); }
+.ll-text-yellow        { color: var(--color-yellow); }
+.ll-text-light-green   { color: var(--color-light-green); }
+.ll-text-white         { color: var(--color-white); }
+.ll-text-black         { color: var(--color-black); }
+
+/* Border Colors */
+.ll-border-dark-green    { border-color: var(--color-dark-green); }
+.ll-border-yellow        { border-color: var(--color-yellow); }
+.ll-border-light-green   { border-color: var(--color-light-green); }
+.ll-border-white         { border-color: var(--color-white); }
+.ll-border-black         { border-color: var(--color-black); }
+
