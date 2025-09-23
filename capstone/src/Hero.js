@@ -1,4 +1,4 @@
-import hero from "./assets/icons_assets/Mario and Adrian b.jpg";
+import hero from "./assets/icons_assets/restaurant.jpg";
 
 export default function Hero() {
   return (

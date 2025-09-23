@@ -7,11 +7,10 @@
   font-size: 18px;
 }
 
-.Main {
+/* .Main {
   display: grid;
-  gap: 200px;
-  min-height: 500px;
-}
+  gap: 60px;
+} */
 
 .Hero {
   background-color: var(--color-dark-green);
