@@ -7,6 +7,10 @@
   font-size: 18px;
 }
 
+.Nav a:hover {
+  color: var(--color-yellow) !important;
+}
+
 /* .Main {
   display: grid;
   gap: 60px;
@@ -94,14 +98,10 @@ a {
   font-family: var(--font-body);
 }
 
-a:hover {
-  color: var(--color-yellow) !important;
-}
-
 /* Buttons */
 .button-primary {
   background-color: var(--color-yellow);
-  color: var(--color-black);
+  color: var(--color-dark-green);
   font-family: var(--font-body);
   padding: var(--spacing-sm) var(--spacing-md);
   border: none;

@@ -2,6 +2,8 @@ import card1 from "./assets/icons_assets/greek salad.jpg";
 import card2 from "./assets/icons_assets/bruchetta.svg";
 import card3 from "./assets/icons_assets/lemon dessert.jpg";
 
+import { Link } from 'react-router-dom'
+
 export default function Highlights() {
   return (
     <section className="Highlights py-5 my-5">
@@ -9,10 +11,12 @@ export default function Highlights() {
         {/* Heading + Button Row */}
         <div className="row align-items-center justify-content-between g-3">
           <div className="col-auto">
-            <h2 className="display-4 mb-0">Specials</h2>
+            <h2 className="display-4 mb-0 ll-text-dark-green">Specials</h2>
           </div>
           <div className="col-auto">
-            <button className="button-primary">Reserve a Table</button>
+            <Link to="/reservations" className="button-primary">
+              Reserve a Table
+            </Link>
           </div>
         </div>
 
@@ -34,7 +38,9 @@ export default function Highlights() {
                   vinaigrette.
                 </p>
                 <div className="d-flex">
-                  <button className="button-primary w-auto">Order now</button>
+                  <Link to="/order-online" className="button-primary">
+                    Order now
+                  </Link>
                 </div>
               </div>
             </div>
@@ -55,7 +61,9 @@ export default function Highlights() {
                   fresh basil.
                 </p>
                 <div className="d-flex">
-                  <button className="button-primary w-auto">Order now</button>
+                  <Link to="/order-online" className="button-primary">
+                    Order now
+                  </Link>
                 </div>
               </div>
             </div>
@@ -76,7 +84,9 @@ export default function Highlights() {
                   golden crust.
                 </p>
                 <div className="d-flex">
-                  <button className="button-primary w-auto">Order now</button>
+                  <Link to="/order-online" className="button-primary">
+                    Order now
+                  </Link>
                 </div>
               </div>
             </div>

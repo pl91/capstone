@@ -1,14 +1,14 @@
 import about from "./assets/icons_assets/Mario and Adrian b.jpg";
 export default function About() {
   return (
-    <section className="About py-5 my-5">
+    <section className="About py-5">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md order-2 order-md-1">
-            <div className="hero-text">
+            <div className="hero-text ll-text-dark-green">
               <h1 className="display-1 mb-0">Little Lemon</h1>
               <h3 className="h2 mb-4">Chicago</h3>
-              <p className="mb-3">
+              <p className="mb-3 text-black">
                 Little Lemon is a family-owned Mediterranean restaurant located
                 in the heart of Chicago. Founded by Adrian and Mario, two
                 passionate chefs with roots in southern Italy, the restaurant

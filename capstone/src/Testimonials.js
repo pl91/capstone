@@ -5,7 +5,7 @@ export default function Testimonials() {
         {/* Section Title */}
         <div className="row mb-4">
           <div className="col text-center">
-            <h2 className="display-5 text-light">Testimonials</h2>
+            <h2 className="display-5 ll-text-yellow">Testimonials</h2>
           </div>
         </div>
         {/* Testimonial Cards */}

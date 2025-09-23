@@ -1,5 +1,7 @@
 import logo2 from './assets/icons_assets/Logo.svg';
 
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="bg-dark text-light py-5">
@@ -14,13 +16,14 @@ export default function Footer() {
           <div className="col-md-3 mb-4 mb-md-0">
             <h5>Navigation</h5>
             <ul className="list-unstyled">
-              <li><button className="btn btn-link text-light p-0">Home</button></li>
-              <li><button className="btn btn-link text-light p-0">About</button></li>
-              <li><button className="btn btn-link text-light p-0">Menu</button></li>
-              <li><button className="btn btn-link text-light p-0">Reservations</button></li>
-              <li><button className="btn btn-link text-light p-0">Order Online</button></li>
-              <li><button className="btn btn-link text-light p-0">Login</button></li>
+              <li><Link to="/" className="btn btn-link text-light p-0">Home</Link></li>
+              <li><Link to="/about" className="btn btn-link text-light p-0">About</Link></li>
+              <li><Link to="/menu" className="btn btn-link text-light p-0">Menu</Link></li>
+              <li><Link to="/reservations" className="btn btn-link text-light p-0">Reservations</Link></li>
+              <li><Link to="/order-online" className="btn btn-link text-light p-0">Order Online</Link></li>
+              <li><Link to="/login" className="btn btn-link text-light p-0">Login</Link></li>
             </ul>
+
           </div>
 
           {/* Contact Info */}

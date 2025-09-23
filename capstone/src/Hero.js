@@ -1,4 +1,5 @@
 import hero from "./assets/icons_assets/restaurant.jpg";
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -15,7 +16,9 @@ export default function Hero() {
                 passed down through generations, every dish is crafted to
                 nourish, delight, and connect.
               </p>
-              <button className="button-primary">Reserve a Table</button>
+              <Link to="/reservations" className="button-primary">
+                Reserve a Table
+              </Link>
             </div>
           </div>
           <div className="col-12 col-md order-1 order-md-2">
