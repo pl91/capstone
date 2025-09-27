@@ -1,29 +1,36 @@
 import { useReducer } from "react";
+import { useNavigate } from "react-router-dom"; // 🧭 Add navigation hook
 import ReservationForm from "./ReservationForm";
 
-// 🔧 Static list of available times — can be made dynamic later
-const seededTimes = [
-  "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"
-];
+import { fetchAPI, submitAPI } from "./api";
 
 // 🔁 Reducer function — updates availableTimes based on selected date
 export function updateTimes(state, action) {
-  const selectedDate = action.date;
+  const selectedDate = new Date(action.date);
   console.log("Selected date: from updateTimes reducer function", selectedDate);
 
-  // 🧠 Placeholder logic: always return full list for now
-  // Later: filter based on selectedDate or fetch from API
-  return seededTimes;
+  return fetchAPI(selectedDate); // ✅ fetch available times for selected date
 }
 
-// 🧪 Initializer function — sets initial availableTimes
+// 🧪 Initializer function — sets availableTimes for today's date
 export function initializeTimes() {
-  return seededTimes;
+  const today = new Date();
+  return window.fetchAPI(today); // ✅ initial load from global (can refactor later)
 }
 
 export default function ReservationPage() {
+  const navigate = useNavigate(); // 🧭 enables programmatic navigation
+
   // 🧠 useReducer replaces useState for better control over time slot logic
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+
+  // ✅ Step 2A: Define submitForm function and wire to submitAPI
+  const submitForm = (formData) => {
+    const success = submitAPI(formData); // 🔗 call simulated API
+    if (success) {
+      navigate("/confirmed"); // 🧭 redirect to confirmation page
+    }
+  };
 
   return (
     <main className="ReservationPage my-5">
@@ -31,8 +38,12 @@ export default function ReservationPage() {
         Reserve a Table
       </h1>
 
-      {/* 🧩 Pass both availableTimes and dispatch to ReservationForm */}
-      <ReservationForm availableTimes={availableTimes} dispatch={dispatch} />
+      {/* 🧩 Pass availableTimes, dispatch, and submitForm to ReservationForm */}
+      <ReservationForm
+        availableTimes={availableTimes}
+        dispatch={dispatch}
+        submitForm={submitForm} // ✅ Step 2B: pass down to child
+      />
     </main>
   );
 }

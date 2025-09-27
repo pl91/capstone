@@ -1,14 +1,16 @@
 import { useForm } from "react-hook-form";
 
-function ReservationForm({ availableTimes, dispatch }) {
+function ReservationForm({ availableTimes, dispatch, submitForm }) { // ✅ Added submitForm to props
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // ✅ Updated submit handler — calls submitForm with validated data
   const onSubmit = (data) => {
     console.log("Form data:", data);
+    submitForm(data); // 🔗 Pass form data to parent handler
   };
 
   return (
