@@ -93,7 +93,6 @@ p {
 
 /* Anchor tags */
 a {
-  text-decoration: none;
   color: inherit;
   font-family: var(--font-body);
 }
@@ -109,6 +108,7 @@ a {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .button-primary:hover {
@@ -142,3 +142,51 @@ a {
 .ll-border-white         { border-color: var(--color-white); }
 .ll-border-black         { border-color: var(--color-black); }
 
+/* Form */
+
+form {
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fffbe6; /* soft lemon tone */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select {
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  background-color: #f4ce14; /* Little Lemon yellow */
+  color: #333;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: #e3b800;
+}
+
+span {
+  color: red;
+  font-size: 0.875rem;
+}
