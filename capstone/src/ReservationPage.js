@@ -15,7 +15,7 @@ export function updateTimes(state, action) {
 // 🧪 Initializer function — sets availableTimes for today's date
 export function initializeTimes() {
   const today = new Date();
-  return window.fetchAPI(today); // ✅ initial load from global (can refactor later)
+  return fetchAPI(today); // ✅ use same import as reducer
 }
 
 export default function ReservationPage() {
